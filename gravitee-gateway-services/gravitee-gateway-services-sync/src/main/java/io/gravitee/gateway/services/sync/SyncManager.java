@@ -18,10 +18,10 @@ package io.gravitee.gateway.services.sync;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.gravitee.definition.model.Path;
+import io.gravitee.definition.model.Plan;
 import io.gravitee.gateway.dictionary.DictionaryManager;
 import io.gravitee.gateway.dictionary.model.Dictionary;
 import io.gravitee.gateway.handlers.api.definition.Api;
-import io.gravitee.gateway.handlers.api.definition.Plan;
 import io.gravitee.gateway.handlers.api.manager.ApiManager;
 import io.gravitee.node.api.cluster.ClusterManager;
 import io.gravitee.repository.exceptions.TechnicalException;
@@ -319,7 +319,6 @@ public class SyncManager {
 
         plan.setId(repoPlan.getId());
         plan.setName(repoPlan.getName());
-        plan.setApi(repoPlan.getApi());
         plan.setSecurityDefinition(repoPlan.getSecurityDefinition());
         plan.setSelectionRule(repoPlan.getSelectionRule());
         plan.setTags(repoPlan.getTags());
